@@ -38,7 +38,6 @@ app.post('/api/genres',function(req,res){
             if(err){
                 throw err;
             }
-
             res.json(genre);
             });
         });
@@ -49,7 +48,6 @@ app.post('/api/genres',function(req,res){
                 if(err){
                     throw err;
                 }
-    
                 res.json(genre);
                 });
             });
