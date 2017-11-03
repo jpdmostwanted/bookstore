@@ -5,7 +5,17 @@ var mongoose = require('mongoose');
 Genres = require('./models/genre');
 Books = require('./models/book');
 app.use(bodyParse.json());
-mongoose.connect('mongodb://localhost/bookstore');
+//mongoose.connect('mongodb://localhost/bookstore');
+mongoose.connect('mongodb://jpdmw:cybersh0t@ds245615.mlab.com:45615/bookstore');
+//var db = mongoose.connection;
+//var uri = 'mongodb://@ds245615.mlab.com:45615/bookstore';
+
+/*mongoose.createConnection(uri,
+{    
+User: 'jpdmw',
+Password: 'cybersh0t'
+});*/
+
 var db = mongoose.connection;
 
 app.get('/',function (req,res) {
